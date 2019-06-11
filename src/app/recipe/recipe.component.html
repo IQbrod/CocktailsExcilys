@@ -1,0 +1,35 @@
+<mat-card class="recipe-card" *ngIf="recipe">
+  <mat-card-header>
+    <img mat-card-avatar [src]="recipe.picture" [alt]="recipe.picture" />
+    <mat-card-title>{{recipe.name}}</mat-card-title>
+    <mat-card-subtitle>{{recipe.description}}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <img mat-card-image [src]="recipe.picture" [alt]="recipe.picture"/>
+    <div>
+      <div *ngIf="showIngredients">
+          <p>Ingredients:</p>
+          <ul>
+            <li *ngFor="let ingr of recipe.ingredients">
+              {{ingr.ingredient.name}}
+            </li>
+          </ul>
+      </div>
+      <div *ngIf="showInstructions">
+        <p>Instructions:</p>
+        <p>{{recipe.instructions}}</p>
+      </div>
+    </div>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button (click)="btnIngredients()">
+      <div *ngIf="showIngredients">HIDE INGREDIENTS</div>
+      <div *ngIf="! showIngredients">SHOW INGREDIENTS</div>
+    </button>
+    <button mat-button (click)="btnInstructions()">
+      <div *ngIf="showInstructions">HIDE INSTRUCTIONS</div>
+      <div *ngIf="! showInstructions">SHOW INSTRUCTIONS</div>
+    </button>
+    <button *ngIf="showButtonDetails" mat-button [routerLink]="['/recipes',recipe.id]">SHOW DETAILS</button>
+  </mat-card-actions>
+</mat-card>
