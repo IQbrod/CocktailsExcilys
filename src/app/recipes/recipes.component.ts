@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Pipe } from '@angular/core';
 import { Recipe } from '../model/recipe.model';
 import { RecipeService } from '../service/recipe/recipe.service';
 

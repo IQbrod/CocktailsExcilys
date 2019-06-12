@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, FormGroupDirective, FormArray, Validators } from '@angular/forms';
 import { Recipe } from '../model/recipe.model';
 import { RecipeIngredient } from '../model/recipe-ingredient.model';
-import { Ingredient } from '../model/ingredient.model';
 import { Router } from '@angular/router';
 import { RecipeService } from '../service/recipe/recipe.service';
 

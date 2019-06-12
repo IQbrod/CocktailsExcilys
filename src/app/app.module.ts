@@ -14,7 +14,8 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
 import { RecipesComponent } from './recipes/recipes.component';
 import { RecipeDetailsComponent } from './recipe-details/recipe-details.component';
 import { RecipeNewComponent } from './recipe-new/recipe-new.component';
-import { RecipeFormComponent } from './recipe-form/recipe-form.component'
+import { RecipeFormComponent } from './recipe-form/recipe-form.component';
+import { RecipesPipePipe } from './recipes-pipe.pipe'
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { RecipeFormComponent } from './recipe-form/recipe-form.component'
     RecipeDetailsComponent,
     RecipeNewComponent,
     RecipeFormComponent,
+    RecipesPipePipe,
   ],
   imports: [
     BrowserModule,

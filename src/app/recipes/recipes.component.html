@@ -1,1 +1,3 @@
-<app-recipe *ngFor="let recipe of recipes" [recipe]="recipe" [showButtonDetails]="showButtonDetails" (removed)="onRemove($event)"></app-recipe>
+<div *ngIf="recipes">
+    <app-recipe *ngFor="let recipe of (recipes | recipesPipe)" [recipe]="recipe" [showButtonDetails]="showButtonDetails" (removed)="onRemove($event)"></app-recipe>
+</div>
