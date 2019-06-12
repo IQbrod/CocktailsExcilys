@@ -1,0 +1,48 @@
+<div [formGroup]="recipeForm">
+  <label>
+    Name:
+    <input type="text" formControlName="name">
+  </label>
+  <label>
+    Description:
+    <input type="text" formControlName="description">
+  </label>
+  <label>
+    Picture:
+    <input type="text" formControlName="picture">
+  </label>
+
+  <div formArrayName="ingredients">
+    <h3>Ingredients</h3> <button (click)="addIngredient()">Add Ingredient</button>
+    
+    <div *ngFor="let ing of ingredients.controls; let i=index">
+      <div [formGroupName]="i">
+        <label>
+          Name:
+          <input type="text" formControlName="name">
+        </label>
+        <label>
+          Quantity:
+          <input type="number" formControlName="quantity">
+        </label>
+        <label>
+          Unit:
+          <input type="text" formControlName="unit">
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <div formArrayName="instructions">
+    <h3>Instructions</h3> <button (click)="addInstruction()">Add Instruction</button>
+
+    <div *ngFor="let inst of instructions.controls; let i=index">
+      <label>
+        Name:
+        <input type="text" [formControlName]="i">
+      </label>
+    </div>
+  </div>
+
+  <button mat-button (click)="submit()">Envoyer</button>
+</div>

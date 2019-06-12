@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -12,7 +13,8 @@ import { CustomMaterialModule } from './custom-material/custom-material.module';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { RecipesComponent } from './recipes/recipes.component';
 import { RecipeDetailsComponent } from './recipe-details/recipe-details.component';
-import { RecipeNewComponent } from './recipe-new/recipe-new.component'
+import { RecipeNewComponent } from './recipe-new/recipe-new.component';
+import { RecipeFormComponent } from './recipe-form/recipe-form.component'
 
 @NgModule({
   declarations: [
@@ -22,6 +24,7 @@ import { RecipeNewComponent } from './recipe-new/recipe-new.component'
     RecipesComponent,
     RecipeDetailsComponent,
     RecipeNewComponent,
+    RecipeFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,7 +32,8 @@ import { RecipeNewComponent } from './recipe-new/recipe-new.component'
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
