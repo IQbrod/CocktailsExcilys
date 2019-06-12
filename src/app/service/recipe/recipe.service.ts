@@ -18,5 +18,13 @@ export class RecipeService {
   getRecipe(id: string): Observable<Recipe> {
     return this.http.get<Recipe>("http://10.0.1.64:8080/api/v1/recipes/"+id)
   }
+
+  postRecipe(recipe: Recipe): Observable<any> {
+    return this.http.post("http://10.0.1.64:8080/api/v1/recipes/", recipe)
+  }
+
+  deleteRecipe(id: string): Observable<any> {
+    return this.http.delete("http://10.0.1.64:8080/api/v1/recipes/"+id)
+  }
 }
 

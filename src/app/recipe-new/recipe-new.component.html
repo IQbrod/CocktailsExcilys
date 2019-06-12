@@ -1,0 +1,15 @@
+<div>
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Name" [(ngModel)]="name">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <textarea matInput placeholder="Description" [(ngModel)]="description"></textarea>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Picture" [(ngModel)]="picture">
+  </mat-form-field>
+  
+  <button mat-button (click)="submit()">Submit</button>
+</div>

@@ -30,6 +30,7 @@
       <div *ngIf="showInstructions">HIDE INSTRUCTIONS</div>
       <div *ngIf="! showInstructions">SHOW INSTRUCTIONS</div>
     </button>
+    <button mat-button (click)="delete()">DELETE</button> 
     <button *ngIf="showButtonDetails" mat-button [routerLink]="['/recipes',recipe.id]">SHOW DETAILS</button>
   </mat-card-actions>
 </mat-card>

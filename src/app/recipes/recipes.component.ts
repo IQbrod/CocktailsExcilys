@@ -20,4 +20,8 @@ export class RecipesComponent implements OnInit {
       (result) => this.recipes = result
     )
   }
+
+  onRemove(id: Number) {
+    this.recipes.splice(this.recipes.findIndex(x => x.id == id),1)
+  }
 }
